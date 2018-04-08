@@ -2,14 +2,14 @@
 
 <!--
 ========================================
-oooo    oooo               .            
-`888   .8P'              .o8            
- 888  d8'     .ooooo.  .o888oo  .oooo.  
- 88888[      d88' `88b   888   `P  )88b 
- 888`88b.    888   888   888    .oP"888 
- 888  `88b.  888   888   888 . d8(  888 
+oooo    oooo               .
+`888   .8P'              .o8
+ 888  d8'     .ooooo.  .o888oo  .oooo.
+ 88888[      d88' `88b   888   `P  )88b
+ 888`88b.    888   888   888    .oP"888
+ 888  `88b.  888   888   888 . d8(  888
 o888o  o888o `Y8bod8P'   "888" `Y888""8o
-               @nilsu.org               
+               @nilsu.org
 === Copyright (C) 2017  Dakota Walsh ===
 -->
 
@@ -24,6 +24,14 @@ o888o  o888o `Y8bod8P'   "888" `Y888""8o
 	<script>WebFontConfig={google:{families:['Roboto:300:latin']}};</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" async></script>
 </head>
+<div class="color-container">
+	<div class="color-rect" id="color1"></div>
+	<div class="color-rect" id="color2"></div>
+	<div class="color-rect" id="color3"></div>
+	<div class="color-rect" id="color4"></div>
+	<div class="color-rect" id="color5"></div>
+	<div class="color-rect" id="color6"></div>
+</div>
 <main>
 	<time id="js-clock"></time>
 	<form id="js-search-form" autocomplete="off">
@@ -41,15 +49,14 @@ o888o  o888o `Y8bod8P'   "888" `Y888""8o
   var config = {
     categories: [
       { name: "Tools", commands: [
-        { key: 'g', name: 'GitHub', url: 'https://github.com', search: '/search?q=' },
-        { key: 'gl', name: 'GitLab', url: 'https://gitlab.com', search: '/search?utf8=✓&search=' },
-        { key: 'al', name: 'Alternative To', url: 'http://alternativeto.net', search: '/browse/search?q=' },
-        { key: 'fx', name: 'FXSolver', url: 'https://fxsolver.com', search: '/browse/search?q=' },
+        { key: 'gh', name: 'GitHub', url: 'https://github.com', search: '/search?q=' },
+        { key: 'apo', name: 'Apollo', url: 'https://apollo.rip', search: '/torrents.php?action=advanced&groupname=' },
+        { key: 'ru', name: 'ruTorrent', url: 'https://star.seedhost.eu/blahsd/rutorrent/', search: '/' },
       ] },
       { name: "News", commands: [
         { key: 'r', name: 'Reddit', url: 'https://www.reddit.com', search: '/r/' },
-        { key: 'ni', name: 'Nilsu', url: 'https://www.nilsu.org', search: '/' },
-        { key: 'hn', name: 'Hacker News', url: 'https://news.ycombinator.com', search: '/?query=' },
+        { key: 'fb', name: 'Facebook', url: 'https://www.facebook.com', search: '/search/top/?q=' },
+        { key: 'v', name: 'The Vision', url: 'http://thevision.com', search: '/' },
         { key: 'sl', name: 'Slashdot', url: 'https://slashdot.org/', search: '/index2.pl?fhfilter=' },
       ] },
       { name: "Social", commands: [
@@ -79,7 +86,7 @@ o888o  o888o `Y8bod8P'   "888" `Y888""8o
     ],
 
     // if none of the keys are matched, this is used for searching
-    defaultSearch: 'https://duckduckgo.com/?q=',
+    defaultSearch: 'https://www.google.it/search?q=',
     // the delimiter between the key and your search query
     // e.g. to search GitHub for potatoes you'd type "g:potatoes"
     searchDelimiter: ':'
